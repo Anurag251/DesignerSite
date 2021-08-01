@@ -7,28 +7,48 @@
 
     <!-- css -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="./css/responsive.css" />
     <!-- swiper -->
     <link rel="stylesheet" href="./css/others/swiper.min.css" />
     <!-- jquery -->
     <script src="./js/others/jquery.js"></script>
     <!-- lightbox -->
     <link rel="stylesheet" href="./css/lightbox.min.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
 
     <title>Document</title>
   </head>
   <body>
     <!-- header-end -->
+    <div class="side-nav-bg"></div>
     <header>
       <div class="wrapper">
         <h1 class="logo">Logo</h1>
         <div class="nav">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Logo Design</a></li>
-            <li><a href="#">Graphic Design</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#our-work">Logo Design</a></li>
+            <li><a href="#our-work">Graphic Design</a></li>
+            <li class="drop-down">
+              Add Collections <i class="fas fa-caret-down"></i>
+              <div class="options">
+                <div class="option">
+                  <a href="download-collections.html">Download Collections</a>
+                </div>
+
+                <div class="option"><a href="#">Upload Collections</a></div>
+              </div>
+            </li>
+            <li class="button"><a href="contact.html">Get a Quotation</a></li>
           </ul>
+        </div>
+        <div class="side-nav-btn">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
     </header>
@@ -49,11 +69,15 @@
                   debitis praesentium. At assumenda corporis obcaecati.
                 </p>
               </div>
-              <img src="./images/vector/SVG/banner.svg" alt="" />
+              <div class="image">
+                <img src="./images/vector/SVG/banner.svg" alt="" />
+              </div>
             </div>
 
             <div class="swiper-slide">
-              <img src="./images/vector/SVG/Asset 1.svg" alt="" />
+              <div class="image">
+                <img src="./images/vector/SVG/Asset 1.svg" alt="" />
+              </div>
               <div class="details">
                 <div class="title">Welcome To MRT PIXELS</div>
                 <p>
@@ -75,7 +99,9 @@
                   debitis praesentium. At assumenda corporis obcaecati.
                 </p>
               </div>
-              <img src="./images/vector/SVG/banner.svg" alt="" />
+              <div class="image">
+                <img src="./images/vector/SVG/banner.svg" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -289,7 +315,7 @@
     <!-- what-we-do-end -->
 
     <!-- how-we-work-start -->
-    <section>
+    <!-- <section>
       <div class="how-we-work">
         <div class="wrapper">
           <div class="sec-title">How We Work</div>
@@ -338,22 +364,24 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- how-we-work-end -->
 
     <!-- our-work-start -->
-    <section class="bg">
-      <div class="our-work">
+    <section>
+      <div class="our-work" id="our-work">
         <div class="wrapper">
           <div class="sec-title">Our Awesome Work</div>
 
-          <ul>
-            <li class="active" data-filters="all">All</li>
-            <li data-filters="businessCardImg">Business Card</li>
-            <li data-filters="logoImg">Logo Design</li>
-            <li data-filters="graphicDesignImg">Graphic Design</li>
-            <li data-filters="bannerDesignImg">Banner Design</li>
-          </ul>
+          <div class="btn-list">
+            <ul>
+              <li class="active" data-filters="all">All</li>
+              <li data-filters="businessCardImg">Business Card</li>
+              <li data-filters="logoImg">Logo Design</li>
+              <li data-filters="graphicDesignImg">Graphic Design</li>
+              <li data-filters="bannerDesignImg">Banner Design</li>
+            </ul>
+          </div>
 
           <div class="list">
             <div class="item imageBox logoImg">
@@ -755,9 +783,14 @@
     </footer>
     <!-- footer-end -->
 
+    <div class="scroll-to-top">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
     <!-- js -->
     <script src="./js/others/lightbox-plus-jquery.min.js"></script>
     <script src="./js/others/swiper.min.js"></script>
+    <script src="./js/scripts.js"></script>
     <script>
       // banner
       var swiper = new Swiper('.banner .mySwiper', {
@@ -770,7 +803,7 @@
       // happy-cuseomer
       var swiper = new Swiper('.our-happy-customer .mySwiper', {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 60,
         centeredSlides: true,
         autoplay: {
           delay: 6500,
@@ -780,11 +813,11 @@
         breakpoints: {
           640: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 60,
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 40,
           },
           1024: {
             slidesPerView: 3,

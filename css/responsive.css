@@ -1,0 +1,206 @@
+@media only screen and (max-width: 1250px) {
+  .wrapper {
+    max-width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .wrapper {
+    max-width: 800px;
+  }
+  .side-nav-bg {
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    z-index: 5;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    width: 0;
+  }
+  .side-nav-bg.show {
+    width: 400px;
+  }
+  header {
+    position: relative;
+    z-index: 20;
+  }
+  header .wrapper .side-nav-btn {
+    display: block;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header .wrapper .nav {
+    display: none;
+  }
+  header .wrapper .nav.side-nav {
+    display: block;
+    position: fixed;
+    left: 10px;
+    top: 100px;
+    z-index: 21;
+    max-width: 370px;
+    width: 100%;
+  }
+  header .wrapper .nav.side-nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0 2rem;
+    width: 100%;
+  }
+  header .wrapper .nav.side-nav ul li {
+    margin-right: 2rem;
+    line-height: 5rem;
+    font-weight: 600;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    width: 100%;
+  }
+  header .wrapper .nav.side-nav ul li.drop-down {
+    color: #fff;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  header .wrapper .nav.side-nav ul li.drop-down .options {
+    width: 280px;
+    line-height: 3rem;
+    font-size: 18px;
+  }
+  header .wrapper .nav.side-nav ul li.drop-down .options a {
+    color: #000;
+  }
+  header .wrapper .nav.side-nav ul li a {
+    color: #fff;
+  }
+  .banner .swiper-slide {
+    height: 400px;
+  }
+  .what-we-do .list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .our-work .btn-list {
+    overflow-x: auto;
+  }
+  .our-work ul {
+    overflow: auto;
+    width: 1000px;
+  }
+  .our-work ul li {
+    max-width: 200px;
+  }
+  .our-work .list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .collections .image-list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .our-happy-customer .swiper-slide {
+    padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sec-title {
+    font-size: 30px;
+  }
+  .banner .swiper-slide {
+    height: 700px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner .swiper-slide .details .title {
+    font-size: 30px;
+  }
+  .banner .swiper-slide .image {
+    -ms-grid-row: 1;
+    grid-area: 1;
+  }
+  .banner .swiper-slide img {
+    width: 60%;
+  }
+  .services .item {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .services .item .image {
+    -ms-grid-row: 1;
+    grid-area: 1;
+  }
+  .contact .form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .contact .form .group:nth-child(5) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .collections .image-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .what-we-do .list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .our-work .list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sec-title {
+    font-size: 26px;
+  }
+  .banner .swiper-slide {
+    height: 500px;
+  }
+  .services ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .services ul li {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .services ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .our-happy-customer .swiper-slide {
+    height: 480px;
+    padding: 0 1rem;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

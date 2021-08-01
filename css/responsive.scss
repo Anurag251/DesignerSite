@@ -1,0 +1,241 @@
+@media only screen and (max-width: 1250px) {
+  .wrapper {
+    max-width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .wrapper {
+    max-width: 800px;
+  }
+
+  .side-nav-bg {
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    z-index: 5;
+    transition: 0.4s;
+    width: 0;
+
+    &.show {
+      width: 400px;
+    }
+  }
+
+  header {
+    position: relative;
+    z-index: 20;
+    .wrapper {
+      .side-nav-btn {
+        display: block;
+        justify-content: flex-end;
+      }
+
+      .nav {
+        display: none;
+
+        &.side-nav {
+          display: block;
+          position: fixed;
+          left: 10px;
+          top: 100px;
+          z-index: 21;
+          max-width: 370px;
+          width: 100%;
+
+          ul {
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0 2rem;
+            width: 100%;
+            li {
+              margin-right: 2rem;
+              line-height: 5rem;
+              font-weight: 600;
+              font-size: 24px;
+              border-bottom: 1px solid rgba(#fff, 0.4);
+              width: 100%;
+
+              &.drop-down {
+                color: #fff;
+                justify-content: flex-start;
+
+                .options {
+                  width: 280px;
+                  line-height: 3rem;
+                  font-size: 18px;
+
+                  a {
+                    color: #000;
+                  }
+                }
+              }
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .banner {
+    .swiper-slide {
+      height: 400px;
+    }
+  }
+
+  .what-we-do {
+    .list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .our-work {
+    .btn-list {
+      overflow-x: auto;
+    }
+    ul {
+      overflow: auto;
+      width: 1000px;
+
+      li {
+        max-width: 200px;
+      }
+    }
+
+    .list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .collections {
+    .image-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .our-happy-customer {
+    .swiper-slide {
+      padding: 0 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sec-title {
+    font-size: 30px;
+  }
+
+  .banner {
+    .swiper-slide {
+      height: 700px;
+      grid-template-columns: 1fr;
+      justify-content: center;
+
+      .details {
+        .title {
+          font-size: 30px;
+        }
+      }
+
+      .image {
+        grid-area: 1;
+      }
+
+      img {
+        width: 60%;
+      }
+    }
+  }
+
+  .services {
+    .item {
+      grid-template-columns: 1fr;
+
+      .image {
+        grid-area: 1;
+      }
+    }
+  }
+
+  .contact {
+    .form {
+      grid-template-columns: 1fr;
+
+      .group {
+        &:nth-child(5) {
+          grid-column: 1;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .collections {
+    .image-list {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .what-we-do {
+    .list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .our-work {
+    .list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sec-title {
+    font-size: 26px;
+  }
+
+  .banner {
+    .swiper-slide {
+      height: 500px;
+    }
+  }
+
+  .services {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .services {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .our-happy-customer {
+    .swiper-slide {
+      height: 480px;
+      padding: 0 1rem;
+    }
+  }
+}
