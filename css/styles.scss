@@ -22,7 +22,7 @@ html {
 
 $bgl: #0ba1af;
 $main: #d92c49;
-$pri: #ed6800;
+$pri: #ec038d;
 $btn: #0493dd;
 $bg: #5022b8;
 $dark: #000000;
@@ -142,6 +142,15 @@ header {
 
     .side-nav-btn {
       display: none;
+    }
+
+    .logo {
+      width: 120px;
+      @include center();
+
+      img {
+        width: 100%;
+      }
     }
 
     .nav {
@@ -473,15 +482,15 @@ header {
 
     li {
       padding: 0.5rem 2rem;
-      border: 2px solid $btn;
-      color: $btn;
+      border: 2px solid $pri;
+      color: $pri;
       font-weight: bold;
       cursor: pointer;
       margin: 0 5px;
 
       &.active {
         color: $light;
-        background-color: $btn;
+        background-color: $pri;
       }
     }
   }
@@ -711,9 +720,13 @@ footer {
         height: 10rem;
       }
       .logo {
-        font-size: 48px;
-        font-weight: 400;
-        margin: 10px 0;
+        width: 130px;
+        @include center();
+        margin-top: 2rem;
+
+        img {
+          width: 100%;
+        }
       }
 
       p {
@@ -964,6 +977,64 @@ footer {
 
         &:focus {
           border: 1px solid $btn;
+        }
+      }
+    }
+  }
+}
+
+/*****************************************************************
+*                           our-teams                            *
+*****************************************************************/
+
+.our-teams {
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 9rem;
+    grid-column-gap: 20px;
+    margin-bottom: 8rem;
+
+    .item {
+      position: relative;
+
+      .image {
+        @include image();
+        height: 450px;
+        width: 100%;
+      }
+
+      .info {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        background-color: $light;
+        text-align: center;
+        box-shadow: 4px 4px 10px rgba($dark, 0.2);
+        border-radius: 20px;
+        padding: 1rem;
+
+        .name {
+          font-size: 24px;
+          font-weight: bold;
+          margin: 0 0 0.5rem;
+        }
+      }
+
+      .social-icons {
+        @include center();
+        justify-content: space-evenly;
+        margin-top: 1rem;
+
+        .icon {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          @include center();
+          background-color: $pri;
+          color: $light;
         }
       }
     }

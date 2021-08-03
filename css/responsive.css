@@ -105,6 +105,12 @@
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .our-teams .list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 770px) {
@@ -155,6 +161,12 @@
 
 @media only screen and (max-width: 660px) {
   .collections .image-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .our-teams .list {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
