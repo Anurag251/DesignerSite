@@ -9,7 +9,7 @@
   background: none;
   list-style: none;
   text-decoration: none;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
 }
 
 html {
@@ -34,7 +34,8 @@ html {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
 }
 
 .button:hover {
@@ -45,15 +46,15 @@ html {
 }
 
 .sec-title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
 }
 
 .sec-title:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -13px;
@@ -65,7 +66,7 @@ html {
 }
 
 .sec-title:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: -13px;
@@ -137,7 +138,7 @@ header .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1rem 25px;
+  padding: 0.5rem 25px;
 }
 
 header .wrapper .side-nav-btn {
@@ -145,7 +146,7 @@ header .wrapper .side-nav-btn {
 }
 
 header .wrapper .logo {
-  width: 120px;
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,6 +160,9 @@ header .wrapper .logo {
 
 header .wrapper .logo img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 header .wrapper .nav ul {
@@ -201,6 +205,21 @@ header .wrapper .nav ul li.drop-down {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+}
+
+header .wrapper .nav ul li.drop-down span {
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: 700;
+  color: #d92c49;
+}
+
+header .wrapper .nav ul li.drop-down img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header .wrapper .nav ul li.drop-down i {
@@ -265,7 +284,7 @@ header .wrapper .nav ul li.drop-down .options a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 500px;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -317,7 +336,7 @@ header .wrapper .nav ul li.drop-down .options a {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 2rem 0 4rem;
+  margin: 1rem 0 2rem;
 }
 
 .services ul li {
@@ -339,13 +358,13 @@ header .wrapper .nav ul li.drop-down .options a {
 }
 
 .services ul li:before {
-  content: '';
+  content: "";
   position: absolute;
   height: 2px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  bottom: 0;
+  bottom: -1px;
   width: 0;
   background-color: #ec038d;
   -webkit-transition: 0.4s;
@@ -353,7 +372,7 @@ header .wrapper .nav ul li.drop-down .options a {
 }
 
 .services ul li:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 0;
@@ -695,7 +714,7 @@ header .wrapper .nav ul li.drop-down .options a {
 }
 
 .get-in-touch::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -795,7 +814,7 @@ header .wrapper .nav ul li.drop-down .options a {
 }
 
 .our-happy-customer .swiper-slide .item .details p:before {
-  content: '\275D';
+  content: "\275D";
   position: absolute;
   top: 0;
   left: 0;
@@ -804,7 +823,7 @@ header .wrapper .nav ul li.drop-down .options a {
 }
 
 .our-happy-customer .swiper-slide .item .details p:after {
-  content: '\275E';
+  content: "\275E";
   position: absolute;
   bottom: -18px;
   right: -10px;
@@ -1153,9 +1172,10 @@ footer .content-list .featured-propertier .image {
 .contact .form .group .form-input {
   width: 100%;
   border: 1px solid #000000;
-  padding: 1rem;
+  padding: 0.7rem;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  font-size: 16px;
 }
 
 .contact .form .group .form-input:focus {
@@ -1239,5 +1259,73 @@ footer .content-list .featured-propertier .image {
           align-items: center;
   background-color: #ec038d;
   color: #ffffff;
+}
+
+.login-page .title,
+.sign-up-page .title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-page form,
+.sign-up-page form {
+  padding: 2rem;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login-page form .button,
+.sign-up-page form .button {
+  padding: 0.7rem 2rem;
+}
+
+.login-page form .account-have,
+.sign-up-page form .account-have {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.login-page form .account-have a,
+.sign-up-page form .account-have a {
+  color: #d92c49;
+  text-decoration: underline;
+}
+
+.login-page .form p,
+.sign-up-page .form p {
+  text-align: right;
+  color: #000000;
+  font-weight: 600;
+}
+
+.login-page .form .group,
+.sign-up-page .form .group {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.login-page .form .group label,
+.sign-up-page .form .group label {
+  font-size: 18px;
+}
+
+.login-page .form .group .form-input,
+.sign-up-page .form .group .form-input {
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 0.7rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.login-page .form .group .form-input:focus,
+.sign-up-page .form .group .form-input:focus {
+  border: 1px solid #0493dd;
 }
 /*# sourceMappingURL=styles.css.map */

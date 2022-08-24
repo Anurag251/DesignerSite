@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
 
 * {
   margin: 0;
@@ -9,7 +9,7 @@
   background: none;
   list-style: none;
   text-decoration: none;
-  font-family: 'Gowun Dodum', sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
 }
 
 html {
@@ -60,7 +60,8 @@ $light: #ffffff;
   box-shadow: 0 0 0 $pri;
   transition: 0.2s;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
 
   &:hover {
     box-shadow: 0 2px 8px rgba($pri, 0.5);
@@ -69,14 +70,14 @@ $light: #ffffff;
 }
 
 .sec-title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -13px;
@@ -88,7 +89,7 @@ $light: #ffffff;
   }
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: -13px;
@@ -138,18 +139,20 @@ header {
   .wrapper {
     @include center();
     justify-content: space-between;
-    padding: 1rem 25px;
+    padding: 0.5rem 25px;
 
     .side-nav-btn {
       display: none;
     }
 
     .logo {
-      width: 120px;
+      width: 100px;
       @include center();
 
       img {
         width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
 
@@ -177,6 +180,20 @@ header {
             position: relative;
             @include center();
             cursor: pointer;
+
+            span {
+              font-size: 16px;
+              margin-right: 10px;
+              font-weight: 700;
+              color: $main;
+            }
+
+            img {
+              height: 35px;
+              width: 35px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
 
             i {
               margin-left: 10px;
@@ -233,7 +250,7 @@ header {
   .swiper-slide {
     @include center();
     @include image();
-    height: 600px;
+    height: 500px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -268,7 +285,7 @@ header {
   ul {
     @include center();
     justify-content: space-evenly;
-    margin: 2rem 0 4rem;
+    margin: 1rem 0 2rem;
 
     li {
       line-height: 2rem;
@@ -286,19 +303,19 @@ header {
       }
 
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         height: 2px;
         left: 50%;
         transform: translate(-50%, -50%);
-        bottom: 0;
+        bottom: -1px;
         width: 0;
         background-color: $pri;
         transition: 0.4s;
       }
 
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         width: 0;
@@ -581,7 +598,7 @@ header {
   height: 400px;
 
   &::after {
-    content: '';
+    content: "";
     @include black();
     background-color: rgba($dark, 0.5);
   }
@@ -652,7 +669,7 @@ header {
           padding: 0.5rem;
 
           &:before {
-            content: '\275D';
+            content: "\275D";
             position: absolute;
             top: 0;
             left: 0;
@@ -661,7 +678,7 @@ header {
           }
 
           &:after {
-            content: '\275E';
+            content: "\275E";
             position: absolute;
             bottom: -18px;
             right: -10px;
@@ -972,8 +989,9 @@ footer {
       .form-input {
         width: 100%;
         border: 1px solid $dark;
-        padding: 1rem;
+        padding: 0.7rem;
         transition: 0.4s;
+        font-size: 16px;
 
         &:focus {
           border: 1px solid $btn;
@@ -1035,6 +1053,66 @@ footer {
           @include center();
           background-color: $pri;
           color: $light;
+        }
+      }
+    }
+  }
+}
+
+.login-page,
+.sign-up-page {
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  form {
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba($dark, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+
+    .button {
+      padding: 0.7rem 2rem;
+    }
+
+    .account-have {
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: 700;
+
+      a {
+        color: $main;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .form {
+    p {
+      text-align: right;
+      color: $dark;
+      font-weight: 600;
+    }
+
+    .group {
+      margin-bottom: 1rem;
+      width: 100%;
+
+      label {
+        font-size: 18px;
+      }
+
+      .form-input {
+        font-size: 16px;
+        width: 100%;
+        border: 1px solid $dark;
+        padding: 0.7rem;
+        transition: 0.4s;
+
+        &:focus {
+          border: 1px solid $btn;
         }
       }
     }
