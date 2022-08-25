@@ -1261,6 +1261,9 @@ footer .content-list .featured-propertier .image {
   color: #ffffff;
 }
 
+/*****************************************************************
+*                      login-page, sign-up-page                  *
+*****************************************************************/
 .login-page .title,
 .sign-up-page .title {
   font-size: 30px;
