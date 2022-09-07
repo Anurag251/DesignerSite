@@ -1079,6 +1079,37 @@ footer .content-list .featured-propertier .image {
 /*****************************************************************
 *                          collections                           *
 *****************************************************************/
+.collections .filter-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.collections .filter-btn li {
+  margin: 0.5rem;
+}
+
+.collections .filter-btn li button {
+  padding: 1rem;
+  border: 1px solid #d92c49;
+  font-size: 16px;
+  font-weight: 700;
+  color: #d92c49;
+  cursor: pointer;
+}
+
+.collections .filter-btn li.active button {
+  background-color: #d92c49;
+  color: #ffffff;
+}
+
 .collections .image-list {
   display: -ms-grid;
   display: grid;

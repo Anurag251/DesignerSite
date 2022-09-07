@@ -61,7 +61,20 @@
 
     <div class="collections">
       <div class="wrapper">
-        <section>
+        <ul class="filter-btn">
+          <li class="active" data-filters="data-logo">
+            <button>Logo</button>
+          </li>
+
+          <li data-filters="data-graphic-designs">
+            <button>Graphic Designs</button>
+          </li>
+
+          <li data-filters="data-banner-designs">
+            <button>Banner Designs</button>
+          </li>
+        </ul>
+        <section class="box-item data-logo">
           <div class="logo-collection">
             <div class="sec-title">Logo Designs</div>
             <div class="image-list">
@@ -104,7 +117,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="box-item data-graphic-designs">
           <div class="logo-collection">
             <div class="sec-title">Graphic Designs</div>
             <div class="image-list">
@@ -171,7 +184,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="box-item data-banner-designs">
           <div class="logo-collection">
             <div class="sec-title">Banner Designs</div>
             <div class="image-list">
@@ -329,11 +342,32 @@
     <script src="./js/scripts.js"></script>
 
     <script>
-      const dropDown = document.querySelector('.drop-down');
-      const drop = document.querySelector('.options');
+      // const dropDown = document.querySelector(".drop-down");
+      // const drop = document.querySelector(".options");
 
-      dropDown.addEventListener('click', () => {
-        drop.classList.toggle('active');
+      // dropDown.addEventListener("click", () => {
+      //   drop.classList.toggle("active");
+      // });
+
+      // collections
+      $(document).ready(function () {
+        $(".box-item").not(".data-logo").hide("1000");
+      });
+
+      $(document).ready(function () {
+        $(".collections ul li").click(function () {
+          const value = $(this).attr("data-filters");
+          $(".box-item")
+            .not("." + value)
+            .hide("1000");
+          $(".box-item")
+            .filter("." + value)
+            .show("1000");
+        });
+
+        $(".collections ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
       });
     </script>
   </body>
