@@ -61,3 +61,20 @@ if (popupAreas[0]) {
     popupCloseBtn.addEventListener("click", () => closing());
   });
 }
+
+const warningMessage = document.querySelector("#warning-message");
+const warningMessageCheck = document.querySelector("#warning-message li");
+const errorMessageClose = document.querySelector("#errorMessageClose");
+
+if (warningMessageCheck) {
+  errorMessageClose.addEventListener("click", () => {
+    warningMessage.classList.remove("active");
+    setInterval(() => {
+      warningMessage.classList.add("active");
+    }, [1000]);
+  });
+
+  setInterval(() => {
+    warningMessage.classList.remove("active");
+  }, [10000]);
+}

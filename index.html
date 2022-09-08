@@ -704,7 +704,19 @@
         </div>
       </div>
     </section>
+
     <!-- our-happy-customer-end -->
+    <ul class="active" id="warning-message">
+      <li class="error">
+        <div class="message">
+          <i class="fas fa-exclamation-triangle"></i> Email or Password is
+          incorrect.
+        </div>
+        <div class="close" id="errorMessageClose">
+          <i class="fas fa-times"></i>
+        </div>
+      </li>
+    </ul>
 
     <!-- footer-start -->
     <footer>
@@ -743,13 +755,18 @@
           <div class="useful-links">
             <div class="titles">Useful Links</div>
             <ul>
-              <li><span>Home</span> <span>About Us</span></li>
-              <li><span>About Us</span> <span>Services</span></li>
-              <li><span>Properties</span> <span>Listings</span></li>
-              <li><span>Testimonials</span> <span>Properties</span></li>
-              <li><span>Blog</span> <span>Testimonials</span></li>
-              <li><span>Contact</span> <span>Elements</span></li>
-              <li><span>FAQ</span> <span></span></li>
+              <li>
+                <a href="#"><span>Home</span></a>
+              </li>
+              <li>
+                <a href="#"><span>Logo Design</span></a>
+              </li>
+              <li>
+                <a href="#"><span>Banner Design</span></a>
+              </li>
+              <li>
+                <a href="#"><span>Download Collections</span></a>
+              </li>
             </ul>
           </div>
           <div class="featured-propertier">
@@ -798,7 +815,7 @@
     <script src="./js/scripts.js"></script>
     <script>
       // banner
-      var swiper = new Swiper('.banner .mySwiper', {
+      var swiper = new Swiper(".banner .mySwiper", {
         autoplay: {
           delay: 6500,
           disableOnInteraction: false,
@@ -806,7 +823,7 @@
       });
 
       // happy-cuseomer
-      var swiper = new Swiper('.our-happy-customer .mySwiper', {
+      var swiper = new Swiper(".our-happy-customer .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 60,
         centeredSlides: true,
@@ -832,7 +849,7 @@
       });
 
       // footer
-      var swiper = new Swiper('footer .mySwiper', {
+      var swiper = new Swiper("footer .mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         autoplay: {
@@ -845,43 +862,43 @@
     <script>
       // services
       $(document).ready(function () {
-        $('.itemBox').not('.logo').hide('1000');
+        $(".itemBox").not(".logo").hide("1000");
       });
 
       $(document).ready(function () {
-        $('.services ul li').click(function () {
-          const value = $(this).attr('data-filters');
-          $('.itemBox')
-            .not('.' + value)
-            .hide('1000');
-          $('.itemBox')
-            .filter('.' + value)
-            .show('1000');
+        $(".services ul li").click(function () {
+          const value = $(this).attr("data-filters");
+          $(".itemBox")
+            .not("." + value)
+            .hide("1000");
+          $(".itemBox")
+            .filter("." + value)
+            .show("1000");
         });
 
-        $('.services ul li').click(function () {
-          $(this).addClass('active').siblings().removeClass('active');
+        $(".services ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
         });
       });
 
       // gallery
       $(document).ready(function () {
-        $('.our-work ul li').click(function () {
-          const value = $(this).attr('data-filters');
-          if (value == 'all') {
-            $('.imageBox').show('1000');
+        $(".our-work ul li").click(function () {
+          const value = $(this).attr("data-filters");
+          if (value == "all") {
+            $(".imageBox").show("1000");
           } else {
-            $('.imageBox')
-              .not('.' + value)
-              .hide('1000');
-            $('.imageBox')
-              .filter('.' + value)
-              .show('1000');
+            $(".imageBox")
+              .not("." + value)
+              .hide("1000");
+            $(".imageBox")
+              .filter("." + value)
+              .show("1000");
           }
         });
 
-        $('.our-work ul li').click(function () {
-          $(this).addClass('active').siblings().removeClass('active');
+        $(".our-work ul li").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
         });
       });
     </script>
